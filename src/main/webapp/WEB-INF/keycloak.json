@@ -1,0 +1,8 @@
+{
+  "realm": "Swarm",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhjFjHbtSOz9gbq/yHQbYPQGEZzbDrueFWsjCaJBude0rrbnXOxv38Ndw+wsPw8ekgrxW57WzhBqYQQEwEFEWUUHVoIl6lLyOnh8KWon8TLYs8sCvdgm2yREX/16Eb1q8tH4AS+dxw7g9SmA+nJtGY6JcoLDBZ0whntrnYDSjnJPHDT1kcETtV85J/5xF8T518E+H45HyjEQ5hQAlxe//tq9nzTD2CelYqmtTfU+2yEdITAJq0s1SgmGwca7HuQYXmfsQIGYEcGBbw8v0u5Nw+TecovpN7q/VO5dq6F35d/eus8ACOoyYS0sU70Nb1sEHjy7fAW7HRtvoqcU2o2+GSQIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "SwarmDemo",
+  "public-client": true
+}

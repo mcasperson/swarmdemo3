@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.wildfly.swarm:wildfly-swarm-plugin:1.0.0.Beta2"
+    }
+}
+
+group 'com.matthewcasperson'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+apply plugin: 'wildfly-swarm'
+
+swarm {
+    mainClassName = "com.matthewcasperson.swarmdemo.MyMain"
+}
+
+sourceCompatibility = 1.8
+
+def swarmVersionBeta2 = '1.0.0.Beta2'
+def swarmVersionBeta1 = '1.0.0.Beta1'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'http://repository.jboss.org/nexus/content/groups/public-jboss'
+    }
+    maven {
+        url 'https://maven.repository.redhat.com/nexus/content/repositories/public'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.wildfly.swarm:bootstrap:' + swarmVersionBeta2
+    compile 'org.wildfly.swarm:jsf:' + swarmVersionBeta2
+    compile 'org.wildfly.swarm:weld:' + swarmVersionBeta2
+    compile 'org.wildfly.swarm:keycloak:' + swarmVersionBeta1
+    compile 'org.wildfly.swarm:keycloak-server:' + swarmVersionBeta1
+    compile 'org.jboss.shrinkwrap:shrinkwrap-api:1.2.3'
+}
